@@ -8,7 +8,7 @@
 
 ## 🌐 Live Demo
 
-> 🔗 [Coming Soon — Deploy Link Here](#)
+> https://gymmmm-web.netlify.app/
 
 ---
 
