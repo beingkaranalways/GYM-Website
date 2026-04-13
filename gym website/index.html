@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Karan Beast Gym — Transform your body with elite personal training, cardio, strength, and yoga. Join 500+ members and forge your greatness today." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#e63946" />
+  <meta property="og:title" content="Karan Beast Gym — Forge Your Greatness" />
+  <meta property="og:description" content="Elite gym with personal training, HIIT, yoga, cardio and nutrition coaching. Premium facilities. Real results." />
+  <meta property="og:type" content="website" />
+  <title>Karan Beast Gym — Forge Your Greatness</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-mode" id="body">
+
+  <!-- ======== PARTICLES CANVAS ======== -->
+  <canvas id="particles-canvas" class="particles-canvas"></canvas>
+
+  <!-- ======== LOADER ======== -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="loader-logo">KARAN <span>BEAST</span></div>
+      <div class="loader-tagline">Forging Champions Since 2014</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <div class="loader-percent" id="loader-percent">0%</div>
+    </div>
+  </div>
+
+  <!-- ======== SCROLL PROGRESS ======== -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <!-- ======== NAVBAR ======== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">KARAN <span>BEAST</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home"        class="nav-link active">Home</a></li>
+        <li><a href="#about"       class="nav-link">About</a></li>
+        <li><a href="#services"    class="nav-link">Services</a></li>
+        <li><a href="#pricing"     class="nav-link">Pricing</a></li>
+        <li><a href="#trainers"    class="nav-link">Trainers</a></li>
+        <li><a href="#gallery"     class="nav-link">Gallery</a></li>
+        <li><a href="#contact"     class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="dark-toggle" class="dark-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon" id="dark-icon"></i>
+        </button>
+        <a href="#pricing" class="btn btn-primary nav-cta">Join Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======== HERO ======== -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <img src="images/hero.png" alt="Karan Beast Gym interior" class="hero-img" />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Floating geometric shapes (subtle, CSS only) -->
+    <div class="hero-shape hero-shape-1"></div>
+    <div class="hero-shape hero-shape-2"></div>
+    <div class="hero-shape hero-shape-3"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-aos="fade-down" data-aos-duration="800">
+        <span class="eyebrow-line"></span> Welcome to Karan Beast Gym <span class="eyebrow-line"></span>
+      </p>
+      <h1 class="hero-title" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+        Transform Your<br /><span class="text-red glitch-text" data-text="BODY TODAY">BODY TODAY</span>
+      </h1>
+      <p class="hero-sub" data-aos="fade-up" data-aos-duration="900" data-aos-delay="250">
+        <span id="typed-text"></span><span class="typed-cursor">|</span>
+      </p>
+      <div class="hero-btns" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400">
+        <a href="#pricing" class="btn btn-primary btn-lg pulse-btn">
+          <i class="fas fa-bolt"></i> Get Started
+        </a>
+        <a href="#services" class="btn btn-outline btn-lg">
+          Explore Programs <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      <div class="hero-stats" data-aos="fade-up" data-aos-duration="900" data-aos-delay="550">
+        <div class="hero-stat">
+          <span class="hero-stat-num">500<span class="text-red">+</span></span>
+          <span class="hero-stat-label">Members</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">15<span class="text-red">+</span></span>
+          <span class="hero-stat-label">Trainers</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">10<span class="text-red">+</span></span>
+          <span class="hero-stat-label">Years</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>Scroll Down</span>
+      <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </section>
+
+  <!-- ======== ABOUT ======== -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Image with subtle glow light-sweep on hover -->
+        <div class="about-img-wrap" data-aos="fade-right" data-aos-duration="900">
+          <div class="img-card">
+            <img src="images/about.png" alt="Inside Karan Beast Gym" class="about-img" />
+            <div class="img-shine"></div>
+          </div>
+          <div class="about-badge">
+            <span class="badge-num">10</span>
+            <span class="badge-label">Years of<br/>Excellence</span>
+          </div>
+        </div>
+
+        <div class="about-content" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+          <p class="section-eyebrow">Who We Are</p>
+          <h2 class="section-title">Built for <span class="text-red">Champions</span></h2>
+          <p class="about-desc">
+            Karan Beast Gym is not just a fitness center — it's a lifestyle. Since 2014, we've been empowering individuals to break their limits, build real strength, and achieve lasting transformation with cutting-edge equipment and elite coaching.
+          </p>
+          <p class="about-desc">
+            Whether you're a beginner stepping into the gym for the first time or a seasoned athlete seeking a new challenge, Karan Beast provides a personalized experience built around your goals.
+          </p>
+          <div class="about-features">
+            <div class="about-feature"><i class="fas fa-check-circle text-red"></i> Premium Equipment</div>
+            <div class="about-feature"><i class="fas fa-check-circle text-red"></i> Expert Certified Trainers</div>
+            <div class="about-feature"><i class="fas fa-check-circle text-red"></i> 24/7 Access Available</div>
+            <div class="about-feature"><i class="fas fa-check-circle text-red"></i> Personalized Plans</div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+              <i class="fas fa-users text-red"></i>
+              <span class="stat-num" data-target="500">0</span><span class="stat-suf">+</span>
+              <span class="stat-label">Members</span>
+            </div>
+            <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+              <i class="fas fa-dumbbell text-red"></i>
+              <span class="stat-num" data-target="15">0</span><span class="stat-suf">+</span>
+              <span class="stat-label">Trainers</span>
+            </div>
+            <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+              <i class="fas fa-trophy text-red"></i>
+              <span class="stat-num" data-target="120">0</span><span class="stat-suf">+</span>
+              <span class="stat-label">Champions</span>
+            </div>
+            <div class="stat-card" data-aos="zoom-in" data-aos-delay="500">
+              <i class="fas fa-star text-red"></i>
+              <span class="stat-num" data-target="10">0</span><span class="stat-suf">+</span>
+              <span class="stat-label">Years</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SERVICES ======== -->
+  <section id="services" class="services section section-dark">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">What We Offer</p>
+        <h2 class="section-title">Our <span class="text-red">Programs</span></h2>
+        <p class="section-subtitle">Choose from a wide range of specialized programs designed by certified experts to help you reach your goals faster.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon"><i class="fas fa-user-check"></i></div>
+          <h3>Personal Training</h3>
+          <p>One-on-one sessions with elite coaches tailored specifically to your body type, fitness level, and goals.</p>
+          <a href="#pricing" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon"><i class="fas fa-running"></i></div>
+          <h3>Cardio Training</h3>
+          <p>High-intensity cardio programs designed to burn fat, boost endurance, and improve cardiovascular health.</p>
+          <a href="#pricing" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
+          <h3>Strength Training</h3>
+          <p>Progressive overload programs including powerlifting, Olympic lifting, and functional strength development.</p>
+          <a href="#pricing" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon"><i class="fas fa-spa"></i></div>
+          <h3>Yoga &amp; Mindfulness</h3>
+          <p>Certified yoga instructors guiding you through flexibility, mental clarity, stress relief, and full recovery.</p>
+          <a href="#pricing" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-icon"><i class="fas fa-fire"></i></div>
+          <h3>HIIT Classes</h3>
+          <p>High-Intensity Interval Training sessions that maximize calorie burn in minimum time with group energy.</p>
+          <a href="#pricing" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-icon"><i class="fas fa-apple-alt"></i></div>
+          <h3>Nutrition Coaching</h3>
+          <p>Expert dietary guidance and custom meal plans to complement your training and accelerate real results.</p>
+          <a href="#pricing" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== PRICING ======== -->
+  <section id="pricing" class="pricing section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Membership Plans</p>
+        <h2 class="section-title">Choose Your <span class="text-red">Plan</span></h2>
+        <p class="section-subtitle">Flexible plans for every budget and goal. No hidden fees, no contracts — just results.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="pricing-header">
+            <h3>Basic</h3>
+            <div class="price"><span class="currency">$</span>29<span class="period">/mo</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Gym Access (6AM–10PM)</li>
+            <li><i class="fas fa-check"></i> Cardio Equipment</li>
+            <li><i class="fas fa-check"></i> Locker Room Access</li>
+            <li><i class="fas fa-check"></i> 1 Group Class/Week</li>
+            <li class="disabled"><i class="fas fa-times"></i> Personal Trainer</li>
+            <li class="disabled"><i class="fas fa-times"></i> Nutrition Coaching</li>
+            <li class="disabled"><i class="fas fa-times"></i> 24/7 Access</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline w-full">Get Started</a>
+        </div>
+
+        <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="150">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-header">
+            <h3>Standard</h3>
+            <div class="price"><span class="currency">$</span>59<span class="period">/mo</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Full Gym Access</li>
+            <li><i class="fas fa-check"></i> All Equipment</li>
+            <li><i class="fas fa-check"></i> Unlimited Group Classes</li>
+            <li><i class="fas fa-check"></i> 2 PT Sessions/Month</li>
+            <li><i class="fas fa-check"></i> Locker &amp; Towel Service</li>
+            <li><i class="fas fa-check"></i> Nutrition Plan</li>
+            <li class="disabled"><i class="fas fa-times"></i> 24/7 Access</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary w-full">Get Started</a>
+        </div>
+
+        <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="pricing-header">
+            <h3>Beast Mode</h3>
+            <div class="price"><span class="currency">$</span>99<span class="period">/mo</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> 24/7 Unlimited Access</li>
+            <li><i class="fas fa-check"></i> All Equipment &amp; Classes</li>
+            <li><i class="fas fa-check"></i> Unlimited PT Sessions</li>
+            <li><i class="fas fa-check"></i> Custom Nutrition Plan</li>
+            <li><i class="fas fa-check"></i> Recovery &amp; Spa Access</li>
+            <li><i class="fas fa-check"></i> Guest Passes (2/mo)</li>
+            <li><i class="fas fa-check"></i> Priority Booking</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline w-full">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== TRAINERS ======== -->
+  <section id="trainers" class="trainers section section-dark">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Meet the Team</p>
+        <h2 class="section-title">Expert <span class="text-red">Trainers</span></h2>
+        <p class="section-subtitle">Our certified coaches bring years of experience and passion to help you achieve extraordinary results.</p>
+      </div>
+      <div class="trainers-grid">
+
+        <div class="trainer-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="trainer-img-wrap">
+            <img src="images/trainer1.png" alt="Marcus Stone — Strength Coach" />
+            <div class="trainer-img-shine"></div>
+            <div class="trainer-overlay">
+              <div class="trainer-socials">
+                <a href="#" aria-label="Instagram" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="trainer-info">
+            <h3>Marcus Stone</h3>
+            <p class="trainer-role">Strength &amp; Conditioning</p>
+            <div class="trainer-tags">
+              <span>Powerlifting</span><span>HIIT</span><span>Rehab</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="trainer-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="trainer-img-wrap">
+            <img src="images/trainer2.png" alt="Sofia Carter — Yoga Coach" />
+            <div class="trainer-img-shine"></div>
+            <div class="trainer-overlay">
+              <div class="trainer-socials">
+                <a href="#" aria-label="Instagram" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="trainer-info">
+            <h3>Sofia Carter</h3>
+            <p class="trainer-role">Yoga &amp; Wellness Coach</p>
+            <div class="trainer-tags">
+              <span>Yoga</span><span>Pilates</span><span>Nutrition</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="trainer-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="trainer-img-wrap">
+            <img src="images/trainer3.png" alt="Jake Rivera — MMA Coach" />
+            <div class="trainer-img-shine"></div>
+            <div class="trainer-overlay">
+              <div class="trainer-socials">
+                <a href="#" aria-label="Instagram" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="trainer-info">
+            <h3>Jake Rivera</h3>
+            <p class="trainer-role">MMA &amp; Combat Training</p>
+            <div class="trainer-tags">
+              <span>Boxing</span><span>Cardio</span><span>Agility</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== TESTIMONIALS ======== -->
+  <section id="testimonials" class="testimonials section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">What Members Say</p>
+        <h2 class="section-title">Success <span class="text-red">Stories</span></h2>
+      </div>
+      <div class="testimonials-slider" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonials-track" id="testimonials-track">
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p class="testimonial-text">"Karan Beast Gym completely changed my life. I lost 40 lbs in 5 months and feel stronger than ever. The trainers genuinely care about your progress!"</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">JD</div>
+                <div><strong>James D.</strong><br/><span>Lost 40 lbs in 5 months</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p class="testimonial-text">"The yoga classes here are incredible. Sofia is an amazing coach who helped me recover from a back injury while building core strength."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">AP</div>
+                <div><strong>Aisha P.</strong><br/><span>Yoga Member, 1 Year</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p class="testimonial-text">"Best gym in the city, hands down. World-class equipment, awesome community, and the HIIT classes are brutal in the best possible way!"</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">MK</div>
+                <div><strong>Mike K.</strong><br/><span>Beast Mode Member, 2 Years</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+              <p class="testimonial-text">"Marcus helped me go from beginner to competing in my first powerlifting meet in just 8 months. The programming at Karan Beast is exceptional."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">RL</div>
+                <div><strong>Rachel L.</strong><br/><span>Powerlifting Competitor</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p class="testimonial-text">"Joining Karan Beast Gym was the best investment in myself. The nutrition coaching alone has changed how I eat and feel every day!"</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">TN</div>
+                <div><strong>T. Nguyen</strong><br/><span>Standard Member, 8 Months</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn" id="prev-btn" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+          <div class="slider-dots" id="slider-dots"></div>
+          <button class="slider-btn" id="next-btn" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== GALLERY ======== -->
+  <section id="gallery" class="gallery section section-dark">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Our Facility</p>
+        <h2 class="section-title">Inside <span class="text-red">Karan Beast</span></h2>
+        <p class="section-subtitle">State-of-the-art equipment and inspiring spaces built for every type of athlete.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="0"   data-src="images/hero.png"     data-caption="Karan Beast — Main Gym Floor">
+          <div class="gallery-img-wrap">
+            <img src="images/hero.png"     alt="Main gym floor" loading="lazy" />
+            <div class="gallery-shine"></div>
+          </div>
+          <div class="gallery-overlay"><i class="fas fa-expand-alt"></i><span>Main Floor</span></div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="80"  data-src="images/gallery1.png" data-caption="Premium Weight Room">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery1.png" alt="Weight room" loading="lazy" />
+            <div class="gallery-shine"></div>
+          </div>
+          <div class="gallery-overlay"><i class="fas fa-expand-alt"></i><span>Weight Room</span></div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="160" data-src="images/gallery2.png" data-caption="Strength Training Area">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery2.png" alt="Strength training" loading="lazy" />
+            <div class="gallery-shine"></div>
+          </div>
+          <div class="gallery-overlay"><i class="fas fa-expand-alt"></i><span>Strength Zone</span></div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="240" data-src="images/gallery3.png" data-caption="Yoga &amp; Wellness Studio">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery3.png" alt="Yoga studio" loading="lazy" />
+            <div class="gallery-shine"></div>
+          </div>
+          <div class="gallery-overlay"><i class="fas fa-expand-alt"></i><span>Yoga Studio</span></div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="320" data-src="images/gallery4.png" data-caption="Spin &amp; Cardio Studio">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery4.png" alt="Spin studio" loading="lazy" />
+            <div class="gallery-shine"></div>
+          </div>
+          <div class="gallery-overlay"><i class="fas fa-expand-alt"></i><span>Cardio Studio</span></div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="400" data-src="images/about.png"   data-caption="Training Floor">
+          <div class="gallery-img-wrap">
+            <img src="images/about.png"   alt="Training floor" loading="lazy" />
+            <div class="gallery-shine"></div>
+          </div>
+          <div class="gallery-overlay"><i class="fas fa-expand-alt"></i><span>Training Floor</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== LIGHTBOX ======== -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close"><i class="fas fa-times"></i></button>
+    <button class="lightbox-prev"  id="lightbox-prev"  aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+    <button class="lightbox-next"  id="lightbox-next"  aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightbox-img" />
+      <p id="lightbox-caption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- ======== CONTACT ======== -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Get In Touch</p>
+        <h2 class="section-title">Contact <span class="text-red">Us</span></h2>
+        <p class="section-subtitle">Ready to start your journey? Reach out and our team will get back to you within 24 hours.</p>
+      </div>
+      <div class="contact-grid">
+
+        <div class="contact-info" data-aos="fade-right" data-aos-duration="900">
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Location</h4>
+              <p>123 Beast Street, Fitness District<br/>New York, NY 10001</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h4>Phone</h4>
+              <p>+1 (800) 555-BEAST<br/>+1 (800) 555-2327</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p>hello@karanbeastgym.com<br/>support@karanbeastgym.com</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Hours</h4>
+              <p>Mon – Fri: 5AM – 11PM<br/>Sat – Sun: 7AM – 9PM</p>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap" data-aos="fade-left" data-aos-duration="900" data-aos-delay="100">
+          <form id="contact-form" class="contact-form" action="https://formspree.io/f/xpqkzynb" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New Message — Karan Beast Gym Website" />
+            <!-- Honeypot: bots fill this, humans don't — Formspree ignores real submissions -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-name">Full Name</label>
+                <input type="text" id="form-name" name="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="form-email">Email Address</label>
+                <input type="email" id="form-email" name="email" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="form-subject">Subject</label>
+              <select id="form-subject" name="subject">
+                <option value="">Select a subject</option>
+                <option value="membership">Membership Inquiry</option>
+                <option value="training">Personal Training</option>
+                <option value="classes">Group Classes</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" name="message" rows="5" placeholder="Tell us your goals..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-full" id="form-submit">
+              <span>Send Message</span> <i class="fas fa-paper-plane"></i>
+            </button>
+            <div id="form-success" class="form-success hidden">
+              <i class="fas fa-check-circle"></i> Message sent! We'll be in touch within 24 hours.
+            </div>
+          </form>
+        </div>
+
+      </div>
+      <div class="map-wrap" data-aos="fade-up" data-aos-delay="200">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2412648718453!2d-73.98784368459397!3d40.74844097932881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1649877456826!5m2!1sen!2sus"
+          width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Karan Beast Gym map">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#home" class="nav-logo">KARAN <span>BEAST</span></a>
+            <p>Forging champions since 2014. Your transformation starts here — expert coaching, premium facilities, and an unstoppable community.</p>
+            <div class="contact-socials">
+              <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-links-group">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Programs</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#trainers">Trainers</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-group">
+            <h4>Programs</h4>
+            <ul>
+              <li><a href="#services">Personal Training</a></li>
+              <li><a href="#services">Cardio Classes</a></li>
+              <li><a href="#services">Strength Training</a></li>
+              <li><a href="#services">Yoga &amp; Wellness</a></li>
+              <li><a href="#services">HIIT Classes</a></li>
+              <li><a href="#services">Nutrition Coaching</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-group">
+            <h4>Contact Info</h4>
+            <ul class="footer-contact">
+              <li><i class="fas fa-map-marker-alt text-red"></i> 123 Beast Street, NY 10001</li>
+              <li><i class="fas fa-phone-alt text-red"></i> +1 (800) 555-BEAST</li>
+              <li><i class="fas fa-envelope text-red"></i> hello@karanbeastgym.com</li>
+              <li><i class="fas fa-clock text-red"></i> Mon–Fri: 5AM – 11PM</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2024 Karan Beast Gym. All rights reserved. | Crafted with <i class="fas fa-heart text-red"></i> for champions.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
